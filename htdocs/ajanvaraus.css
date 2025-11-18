@@ -1,0 +1,11 @@
+body {
+	background: url(time.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+.sinitaus {
+	background-color: #45aaf2;
+}
+.valkotaus {
+	background-color: #fff;
+	padding: 10px;
+}

@@ -1,0 +1,42 @@
+
+<?php 
+// Yhdistetään MySQL-palvelimeen
+$dbh = mysqli_connect('localhost', 'root', '');
+
+if (!$dbh) {
+    die("Unable to connect to MySQL: " . mysqli_connect_error());
+}
+
+// Valitaan tietokanta
+if (!mysqli_select_db($dbh, 'my_personal_contacts')) {
+    die("Unable to select database: " . mysqli_error($dbh));
+}
+
+// Suoritetaan SQL-kysely
+$sql_stmt = "SELECT * FROM my_contacts";
+$result = mysqli_query($dbh, $sql_stmt);
+
+if (!$result) {
+    die("Database access failed: " . mysqli_error($dbh));
+}
+
+// Tarkistetaan, löytyykö rivejä
+$rows = mysqli_num_rows($result);
+
+if ($rows > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo 'ID: ' . htmlspecialchars($row['id']) . '<br>';
+        echo 'Full Names: ' . htmlspecialchars($row['full_names']) . '<br>';
+        echo 'Gender: ' . htmlspecialchars($row['gender']) . '<br>';
+        echo 'Contact No: ' . htmlspecialchars($row['contact_no']) . '<br>';
+        echo 'Email: ' . htmlspecialchars($row['email']) . '<br>';
+        echo 'City: ' . htmlspecialchars($row['city']) . '<br>';
+        echo 'Country: ' . htmlspecialchars($row['country']) . '<br><br>';
+    }
+} else {
+    echo "No contacts found.";
+}
+
+// Suljetaan tietokantayhteys
+mysqli_close($dbh);
+?>

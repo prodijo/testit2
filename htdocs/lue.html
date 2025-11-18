@@ -1,0 +1,15 @@
+<script>	
+$(document).ready(function(){
+	console.log("haa");
+	
+	$.getJSON("ajat.json", function(response){
+		
+			$(response.ajat).each(function(index, arvo) {
+				var teksti = "<br><input type='radio' name='aika' value='"+(arvo.aika)+
+				"'> "+arvo.aika+"</input>";
+				console.log(teksti);
+				$("#vapaatAjat").append($(teksti));
+	});						
+});
+});
+</script>

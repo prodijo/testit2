@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS ajanvaraus;
+USE ajanvaraus;
+
+CREATE TABLE IF NOT EXISTS varaukset (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nimi VARCHAR(100) NOT NULL,
+    paiva DATE NOT NULL,
+    aika TIME NOT NULL
+);

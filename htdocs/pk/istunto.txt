@@ -1,0 +1,14 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="6">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="696" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\funktioita.php" />
+            <File firstVisibleLine="15" xOffset="0" scrollWidth="536" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\index.php" />
+            <File firstVisibleLine="100" xOffset="0" scrollWidth="544" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\kirjoita.php" />
+            <File firstVisibleLine="32" xOffset="0" scrollWidth="528" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\lue.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="352" startPos="0" endPos="0" selMode="0" lang="CSS" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\paivakirja.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="896" startPos="309" endPos="309" selMode="0" lang="SQL" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\paivakirja.sql" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="630" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\Program Files (x86)\Apache Software Foundation\Apache2.2\htdocs\paivakirja\poista.php" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Nelilaskin lomake</title>
+</head>
+<body>
+
+    <h2>Nelilaskin</h2>
+
+    <form action="lasket.php" method="POST">
+	<label for="first_number">Luku 1:</label>
+
+        <input type="number" id="first_number" name="first_number" required><br><br>
+
+        <label for="second_number">Luku 2:</label>
+        <input type="number" id="second_number" name="second_number" required><br><br>
+
+        <label for="operation">Valitse laskutoimitus:</label>
+        <select id="operation" name="operation">
+            <option value="plus">Yhteenlasku (+)</option>
+            <option value="miinus">Vähennyslasku (-)</option>
+            <option value="kerto">Kertolasku (×)</option>
+            <option value="jako">Jakolasku (/)</option>
+        </select><br><br>
+
+        <input type="hidden" name="form_submitted" value="1">
+        <input type="submit" value="Laske">
+    </form>
+
+</body>
+</html>

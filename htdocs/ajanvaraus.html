@@ -1,0 +1,90 @@
+<!doctype html>
+<!-- Sirpa Haataja 2019
+	ajanvaraus.html
+-->
+<html lang="fi">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS ensin -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Sitten oma css -->
+    <link rel="stylesheet" href="ajanvaraus.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Ajanvaraus</title>
+  </head>
+  <body>
+	<div class="jumbotron jumbotron-fluid sinitaus">
+		<div class="container">
+			<h1>Tervetuloa varaamaan äikä</h1>
+		</div>
+	</div>
+	
+	<form>
+	<div class="container valkotaus">
+		<div class="form-group">
+		<label for="sposti">Sähköposti</label>
+		<input type="email" class="form-control" id="sposti" placeholder="name@example.com" required>
+		</div>
+		
+		<div class="form-group">
+		<label for="aiheet">Valitse aihe:</label>
+		<select class="custom-select" id="aiheet" name="aiheet">
+		  <option value="m15">15 min</option>
+		  <option value="m30">30 min</option>
+		  <option value="m45">45 min</option>			  
+		</select>
+		</div>
+			
+		<div class="form-group">	
+		<label for="paikka">Valitse paikka:</label>
+		<select class="custom-select" id="paikka" name="paikka">
+		  <option value="p1">Paikka 1</option>
+		  <option value="p2">Paikka 2</option>			  
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="paiva">Valitse päivä:</label>
+		<input class="form-control" type="date" id="paiva" name="paiva" required>
+		</div>
+		<!-- Kun päivä on valittu, niin näkyviin tulee
+			sen päivän vapaat ajat. jQueryllä
+			-->
+		
+<!-- Kellonajat tulevat tähän -->
+<div id="vapaatAjat" class="form-group">
+  <label>Valitse aika:</label>
+</div>
+
+<!-- Lähetä-nappi tulee kellonaikojen jälkeen -->
+<button id="nappi" class="btn btn-primary">Lähetä</button>
+
+<script src="jquery-3.7.1.min.js"></script>			
+<script>	
+$(document).ready(function(){
+	console.log("haa");
+	
+	$.getJSON("ajat.json", function(response){
+		
+			$(response.ajat).each(function(index, arvo) {
+				var teksti = "<br><input type='radio' name='aika' value='"+(arvo.aika)+
+				"'> "+arvo.aika+"</input>";
+				console.log(teksti);
+				$("#vapaatAjat").append($(teksti));
+	});						
+});
+});
+</script>
+	</form>
+	
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

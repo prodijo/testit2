@@ -1,0 +1,24 @@
+﻿td.vasen
+{ background-image:url(images/tausta_vasen.gif); }
+
+table.border
+{ border:1px solid #02516C; }
+
+input,textarea
+{ background-color:#EEEEEE; color:#464646; font-family:verdana,geneva,arial; font-size:11px;}
+
+td.orange
+{ background-color:#FF9900; font-family:verdana, geneva, arial; font-size:12px; color:#000000;
+  font-weight:bold; }
+  
+td.gray
+{ background-color:#CCCCCC; font-family:verdana,geneva,arial; font-size:12px;}
+
+a:link
+{ text-decoration:none; color:#02516C; }
+a:active
+{ text-decoration:none; color:#02516C; }
+a:visited
+{ text-decoration:none; color:#02516C; }
+a:hover
+{ text-decoration:none; color:#FF6000; }
