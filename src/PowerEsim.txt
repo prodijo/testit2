@@ -1,0 +1,14 @@
+
+# Hae nykyisen käyttäjän työpöydän polku
+$desktopPath = [Environment]::GetFolderPath('Desktop')
+
+# Määritä uuden kansion nimi
+$newFolder = Join-Path $desktopPath "Power"
+
+# Luo kansio, jos sitä ei ole
+if (-not (Test-Path $newFolder)) {
+    New-Item -ItemType Directory -Path $newFolder
+    Write-Host "Kansio 'Power' luotu työpöydälle."
+} else {
+    Write-Host "Kansio 'Power' on jo olemassa työpöydällä."
+}
